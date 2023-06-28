@@ -15,7 +15,7 @@
 
 
                     <input id="caption" type="text" class="form-control @error('caption') is-invalid @enderror"
-                           caption="caption" value="{{ old('caption') }}" autofocus>
+                           value="{{ old('caption') }}" autofocus>
 
                     @error('caption')
                     <span class="invalid-feedback" role="alert">
