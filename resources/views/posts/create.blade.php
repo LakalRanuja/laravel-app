@@ -15,7 +15,10 @@
 
 
                     <input id="caption" type="text" class="form-control @error('caption') is-invalid @enderror"
-                           value="{{ old('caption') }}" autofocus>
+                           name="caption"
+                           value="{{ old('caption') }}"
+                           autocomplete="caption"
+                           autofocus>
 
                     @error('caption')
                     <span class="invalid-feedback" role="alert">
@@ -26,8 +29,9 @@
                 </div>
                 <div class="row">
                     <label for="image" class="col-md-4 col-form-label">Post Image</label>
-                    <input type="file" class="form-control-file" id="image" name="image">
-                    @error('caption')
+                    <input type="file" class="form-control-file @error('image') is-invalid @enderror" id="image"
+                           name="image" autocomplete="image">
+                    @error('image')
                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

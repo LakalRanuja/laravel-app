@@ -4,15 +4,20 @@
 <div class="container">
     <div class="row">
         <div class="col-3 p-5">
-            <img src="/svg/dhanush.jpg" style="height: 150px; width: 150px;  " class="rounded-circle">
+            <img src="/assets/dhanush.jpg" style="height: 150px; width: 150px;  " class="rounded-circle">
         </div>
 
         <div class="col-9 pt-5 ">
             <div class="d-flex justify-content-between align-items-baseline"><h1>{{$user->username}}</h1>
-                <a href="#">Add New Post</a>
+                @can('update',$user->profile)
+                <a href="/p/create">Add New Post</a>
+                @endcan
             </div>
+            @can('update',$user->profile)
+            <a href="/profile/{{$user->id}}/edit">Edit Profile</a>
+            @endcan
             <div class="d-flex">
-                <div class="pe-5"><strong>150</strong> posts</div>
+                <div class="pe-5"><strong>{{$user->posts->count()}}</strong> posts</div>
                 <div class="pe-5"><strong>26k</strong> followers</div>
                 <div class="pe-5"><strong>250</strong> following</div>
             </div>
@@ -22,11 +27,15 @@
         </div>
     </div>
 
-    <div class="row" style="text-align: center">
-        <div class="col-4"><img class="w-5" src="/svg/dhanush.jpg" style="height: 250px; width: 250px; right: 100px  ">
+    <div class="row pt-4" style="text-align: center">
+        @foreach($user->posts as $post)
+        <div class="col-4 pb-4">
+            <a href="/p/{{$post->id}}">
+                <img src="/storage/{{$post->image}}"
+                     style="height: 250px; width: 250px; right: 100px  " class="w-80 ">
+            </a>
         </div>
-        <div class="col-4"><img class="w-5" src="/svg/dhanush.jpg" style="height: 250px; width: 250px;  "></div>
-        <div class="col-4"><img class="w-5" src="/svg/dhanush.jpg" style="height: 250px; width: 250px;  "></div>
+        @endforeach
     </div>
 </div>
 @endsection

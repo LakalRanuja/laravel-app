@@ -22,7 +22,7 @@
         <div class="container">
             <a class="navbar-brand d-flex" href="{{ url('/') }}">
                 <!--                    {{ config('app.name', 'Laravel') }}-->
-                <div><img src="/svg/instalogo.png" style="height: 25px; border-right: 1px solid #3333" class="pe-3">
+                <div><img src="/assets/instalogo.png" style="height: 25px; border-right: 1px solid #3333" class="pe-3">
                 </div>
                 <div class="ps-3">Instagram</div>
             </a>
