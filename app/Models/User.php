@@ -67,4 +67,9 @@ class User extends Authenticatable
     public function profile(){
         return $this->hasOne(Profile::class);
     }
+
+    public function likeBt()
+    {
+        return $this->belongsToMany(Profile::class);
+    }
 }

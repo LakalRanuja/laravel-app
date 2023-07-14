@@ -1,0 +1,11 @@
+#heart {
+    display: inline-block;
+    width: 20px;
+    margin-top: 10px;
+    aspect-ratio: 1;
+    border-image: radial-gradient(black 69%, #0000 70%) 84.5%/50%;
+    clip-path: polygon(-41% 0, 50% 91%, 141% 0);
+  }
+#heart:hover {
+    border-image: radial-gradient(red 69%, #0000 70%) 84.5%/50%;
+}

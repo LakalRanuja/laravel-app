@@ -5,7 +5,9 @@
  */
 
 import './bootstrap';
-import { createApp } from 'vue';
+import {createApp} from 'vue';
+import FollowButton from './components/FollowButton.vue';
+import LikeButton from './components/LikeButton.vue';
 
 /**
  * Next, we will create a fresh Vue application instance. You may then begin
@@ -15,8 +17,11 @@ import { createApp } from 'vue';
 
 const app = createApp({});
 
-import FollowButton from './components/FollowButton.vue';
-app.component('follow-button', FollowButton);
+app
+    .component('follow-button', FollowButton)
+    .component('like-button', LikeButton);
+
+// app.component('like-button', LikeButton);
 
 /**
  * The following block of code may be used to automatically register your

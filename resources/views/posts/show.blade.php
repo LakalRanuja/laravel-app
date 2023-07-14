@@ -28,6 +28,7 @@
                             <span class="text-dark">{{$post->user->username}}</span>
                         </a>
                     </span>{{$post->caption}}
+                    <like-button post-id="{{$post->id}}"></like-button>
                 </p>
             </div>
         </div>

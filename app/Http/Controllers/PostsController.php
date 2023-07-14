@@ -49,6 +49,8 @@ class PostsController extends Controller
 
     public function show(\App\Models\Post $post)
     {
+        $user = auth()->user()->likeBt();
         return view('posts.show', compact('post'));
     }
+
 }
