@@ -6,6 +6,25 @@
     border-image: radial-gradient(black 69%, #0000 70%) 84.5%/50%;
     clip-path: polygon(-41% 0, 50% 91%, 141% 0);
   }
+
+#heart:after{
+    display: inline-block;
+    width: 25px;
+    margin-top: 15px;
+    transition: 0.5s;
+}
+
 #heart:hover {
-    border-image: radial-gradient(red 69%, #0000 70%) 84.5%/50%;
+    display: inline-block;
+    width: 25px;
+    margin-top: 15px;
+    border-image: radial-gradient(red 72%, #0000 73%) 87.5%/53%;
+    transition: 0.5s;
+}
+#heart:hover::after{
+    display: inline-block;
+    width: 25px;
+    margin-top: 15px;
+    border-image: radial-gradient(red 72%, #0000 73%) 87.5%/53%;
+    transition: 0.5s;
 }

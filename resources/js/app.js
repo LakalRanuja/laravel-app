@@ -7,7 +7,9 @@
 import './bootstrap';
 import {createApp} from 'vue';
 import FollowButton from './components/FollowButton.vue';
-import LikeButton from './components/LikeButton.vue';
+import LikeComponent from './components/LikeComponent.vue';
+import PostComment from './components/PostComment.vue';
+import CommentLoader from './components/CommentLoader.vue';
 
 /**
  * Next, we will create a fresh Vue application instance. You may then begin
@@ -19,7 +21,9 @@ const app = createApp({});
 
 app
     .component('follow-button', FollowButton)
-    .component('like-button', LikeButton);
+    .component('like-component', LikeComponent)
+    .component('post-comment', PostComment)
+    .component('comment-loader', CommentLoader);
 
 // app.component('like-button', LikeButton);
 

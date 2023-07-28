@@ -70,6 +70,6 @@ class User extends Authenticatable
 
     public function likeBt()
     {
-        return $this->belongsToMany(Profile::class);
+        return $this->hasMany(Profile::class);
     }
 }

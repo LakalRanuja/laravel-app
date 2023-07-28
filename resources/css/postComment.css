@@ -1,0 +1,17 @@
+#postComment{
+    border-radius: 12px;
+}
+#commentBtn{
+    margin-left: 10px;
+    background-color: slategray;
+    color: white;
+    border-radius: 12px;
+    border: 1px;
+}
+#commentBtn:hover{
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 12px;
+    border: 1px;
+}
+

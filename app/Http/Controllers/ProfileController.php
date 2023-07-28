@@ -11,6 +11,7 @@ class ProfileController extends Controller
 {
     public function index(User $user)
     {
+
         $follows = (auth()->user()) ? auth()->user()->following->contains($user->id) : false;
 
         $postCount = Cache::remember(
@@ -59,7 +60,7 @@ class ProfileController extends Controller
 
             $imageArray = ['image' => $imagePath];
         }
-
+        dd($data);
         auth()->user()->profile->update(array_merge(
             $data,
             $imageArray ?? []

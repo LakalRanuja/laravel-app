@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::post('follow/{user}', 'App\Http\Controllers\FollowsController@store');
+Route::post('like/{user}', 'App\Http\Controllers\LikeController@store');
 
 Route::get('/','App\Http\Controllers\PostsController@index');
 Route::get('/p/create', 'App\Http\Controllers\PostsController@create');
