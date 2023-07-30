@@ -1,5 +1,6 @@
 #postComment{
     border-radius: 12px;
+    border: 1px solid black;
 }
 #commentBtn{
     margin-left: 10px;

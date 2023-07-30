@@ -27,9 +27,9 @@
             }
         },
         methods: {
-            commented:function () {
-                console.log('Commented');
-                this.allComments;
+            commented:function (data) {
+
+                this.allComments.data;
             }
         }
 }
